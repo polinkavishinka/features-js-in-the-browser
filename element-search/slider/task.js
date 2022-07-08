@@ -16,14 +16,13 @@ prev.onclick = () => {
 };
 
 next.onclick = () => {
-    if (slideActive + 1 > sliders.length ) {
-       slideActive = 0 ;
-   } else {
-       slideActive += 1;
-   }
-     changeSlide(slideActive);// делаем вызов функции changeSlide(i)
-   };
-
+  if (slideActive - 1 < 0) {
+     slideActive = sliders.length - 1;
+ } else {
+     slideActive -= 1;
+ }
+   changeSlide(slideActive);// делаем вызов функции changeSlide(i)
+ };
 
 function changeSlide(i) {
   [...sliders].forEach((item) => item.classList.remove("slider__item_active"));
