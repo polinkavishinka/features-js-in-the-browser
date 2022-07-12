@@ -16,7 +16,7 @@ prev.onclick = () => {
 }
 
 next.onclick = () => {
-  slideActive - 1 < 0 ? (slideActive = sliders.length - 1) : (slideActive -= 1);
+  slideActive + 1 <= (sliders.length -1) ? (slideActive += 1) : ( slideActive = 0);
   index(slideActive);
 }
 
