@@ -54,9 +54,6 @@ function addCart(element) {
         .closest(".product")
         .querySelector(".product__quantity-value").innerText;
 
-    if (!cartProducts.hasChildNodes()) {
-        cartProducts.closest(".cart").style.display = "block";
-    }
     if (cartProductvalue) {
         cartProductvalue.innerText =
         Number(cartProductvalue.innerText) + Number(productvalue);
